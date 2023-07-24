@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+*{
+margin: 0%;
+padding: 0%;
+box-sizing: border-box;
+font-family: 'Roboto', sans-serif;
+}
+:root{
+    --Tomato: hsl(4, 100%, 67%);
+    --Dark-Slate-Grey: hsl(234, 29%, 20%);
+    --Charcoal-Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+}
+body{
+    display: grid;
+    place-items: center;
+    overflow-x: hidden;
+}
+.form-section{
+    /* display: none; */
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.img-hero{
+    width: 100vw;
+    height: 220px;
+    background-color: blue;
+    background-image: url(assets/images/illustration-sign-up-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.heading{
+ font-size: clamp(3rem, 10vw, 5rem);
+ padding: 20px 0px 20px 10px;
+ color: var(--Dark-Slate-Grey);
+}
+.desc{
+    font-size: clamp(1rem, 5vw, 2rem);
+    color: var(--Charcoal-Grey);
+    padding: 0px 0px 0px 10px;
+    width: 70%;
+    line-height: 35px;
+    font-weight: 500;
+}
+ul{
+    list-style: none;
+    padding: 20px 0px;
+}
+li{
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    color: var(--Charcoal-Grey);
+    line-height: 25px;
+    font-weight: 500;
+    padding: 10px 0px;
+    margin-left:10px ;
+}
+.list-icon{
+    min-height: 10px;
+}
+.input-form{
+margin-left: 10px;
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+label{
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--Dark-Slate-Grey);
+
+}
+br{
+    padding:10px ;
+}
+#email{
+  height: 40px;
+  width: clamp(20rem , 50vw , 30rem);
+  border-radius: 5px;
+  border: 1px solid var(--Charcoal-Grey);
+}
+input[type = "submit"]{
+    width: clamp(20rem , 50vw , 30rem);
+    height: 40px;
+    background-color: var(--Dark-Slate-Grey);
+    border-radius: 5px;
+    color: var(--White);
+    font-size: 16px;
+    border: none;
+}
+input[type = "submit"]:hover{
+    background: rgb(255,80,115);
+background: linear-gradient(43deg, rgba(255,80,115,1) 45%, rgba(255,97,92,1) 54%, rgba(255,80,115,1) 100%);
+}
+.msg-success{
+    height: 100vh;
+    margin: 60px;
+    overflow: hidden;
+    /* transform: translateX(-100%); */
+    display: none;
+    z-index: 999;
+    background-color: white;
+}
+.des{
+    font: size 16px;
+    margin-bottom: 40px;
+    padding: 20px 0px;
+}
+input[type="button"]{
+    height: 50px;
+    width: 80%;
+    background-color: var(--Dark-Slate-Grey);
+    border-radius: 5px;
+    color: var(--White);
+    font-size: 16px;
+    border: none;
+    margin-top: 40px;
+}
+input[type="button"]:hover{
+    background: rgb(255,80,115);
+    background: linear-gradient(43deg, rgba(255,80,115,1) 45%, rgba(255,97,92,1) 54%, rgba(255,80,115,1) 100%);
+}
+@media screen and (min-width:760px) {
+    body{
+        height: 100svh;
+        display: grid;
+        place-items: center;
+        overflow-x: hidden;
+        background-color: #37384E;
+    }
+    .form-section{
+        width: 50em;
+        height: 75vh;
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 20px;
+        background: white;
+        border-radius: 20px;
+        font-size: 16px;
+        padding: 20px;
+    }
+    .signin-sec{
+        width: 50%;
+        padding:40px ;
+    }
+    .img-hero{
+        height: 100%;
+        background-size: cover;
+        border-radius: 10px;
+    }
+    .heading{
+        font-size: 2em;
+        padding: 0%;
+    }
+    .desc{
+        font-size: .92em;
+         width: 80%;
+        line-height: 1.5em;
+        padding: 1rem 0px;
+    }
+    .services{
+        padding: 0% 0px 10px 0px;
+    }
+    li{
+        font-size: .92rem;
+        width: 50vw;
+        display: flex;
+        gap: 5px;
+    }
+    .input-form{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    #email{
+        width: 25em;
+        padding: 0%;
+    }
+    input[type="submit"]{
+        width:19.5em;
+        padding: 0%;
+        font-size: .91em;
+    }
+    .msg-success{
+        display: none;
+        height: 55vh;
+        width:22em;
+        padding: 20px;
+        border-radius:10px ;
+    }
+    .msg-success > .heading{
+        padding: 10px 0px 10px 0px;
+        margin: 0%;
+    }
+    .des{
+        margin: 0%;
+        padding: 0%;
+    }
+    input[type="button"]{
+        margin: 15px 0px 0px;
+        width: 95%;
+    }
+}
